@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -9,15 +10,42 @@ import {
 } from "react-icons/io";
 
 const Navbar = () => {
+  //gerenciamento de estados
   const [navbar, setNavbar] = useState(false);
+  const [color, setColor] = useState("transparent");
 
+  //mostrar navbar
   const handleShowNavbar = () => {
     setNavbar(!navbar);
   };
 
+  //itens de navegação
+  const navigation = [
+    { name: "Principal", href: "/" },
+    { name: "Sobre", href: "#sobre" },
+    { name: "Projetos", href: "#projetos" },
+    // { name: "Blog", href: "blogs" },
+    { name: "Contato", href: "#contato" },
+  ];
+
+  //efeito na navbar ao scrollar a página
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 90) {
+        setColor("#0f0f0f");
+      } else {
+        setColor("transparent");
+      }
+    };
+    window.addEventListener("scroll", changeColor);
+  }, []);
+
   return (
-    <div className="fixed right-0 top-0 w-full z-10 ease-in duration-300">
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
+    <div
+      style={{ backgroundColor: `${color}` }}
+      className="fixed right-0 top-0 w-full h-16 z-10 ease-in duration-300"
+    >
+      <div className="max-w-[1240px] m-auto flex justify-between items-center text-white p-1">
         <Link href="/">
           <h1 className="text-principal text-3xl font-semibold">
             {"<"}
@@ -26,18 +54,17 @@ const Navbar = () => {
           </h1>
         </Link>
         <ul className="hidden sm:flex">
-          <li className="p-4">
-            <Link href="/">Principal</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/#gallery">Sobre</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/work">Projetos</Link>
-          </li>
-          <li className="p-4">
-            <Link href="/contact">Contato</Link>
-          </li>
+          {navigation.map((item) => (
+            <li className="p-4">
+              <Link
+                key={item.name}
+                href={item.href}
+                className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Button */}
@@ -48,8 +75,8 @@ const Navbar = () => {
         <div
           className={
             navbar
-              ? "sm:hidden absolute top-0 right-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 right-[-100%] right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              ? "sm:hidden absolute top-0 right-0 bottom-0 flex flex-col justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              : "sm:hidden absolute top-0 right-[-100%] bottom-0 flex flex-col justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
           }
         >
           <div className="text-principal text-4xl font-semibold">
@@ -60,30 +87,18 @@ const Navbar = () => {
             </Link>
           </div>
           <ul className="my-24 ">
-            <li
-              onClick={handleShowNavbar}
-              className="p-4 text-principal text-2xl hover:text-gray-500"
-            >
-              <Link href="/">Página Principal</Link>
-            </li>
-            <li
-              onClick={handleShowNavbar}
-              className="p-4 text-principal text-2xl hover:text-gray-500"
-            >
-              <Link href="/#gallery">Sobre</Link>
-            </li>
-            <li
-              onClick={handleShowNavbar}
-              className="p-4 text-principal text-2xl hover:text-gray-500"
-            >
-              <Link href="/work">Projetos</Link>
-            </li>
-            <li
-              onClick={handleShowNavbar}
-              className="p-4 text-principal text-2xl hover:text-gray-500"
-            >
-              <Link href="/contact">Contato</Link>
-            </li>
+            {navigation.map((item) => (
+              <li className="p-4">
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={handleShowNavbar}
+                  className="p-4 text-principal text-2xl hover:text-gray-500"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div id="social medias" className="">
             <p className="tracking-widest text-white">Vamos nos conectar!</p>

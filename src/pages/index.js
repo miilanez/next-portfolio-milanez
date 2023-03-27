@@ -1,5 +1,9 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
 import Head from "next/head";
 
 export default function Home() {
@@ -19,6 +23,12 @@ export default function Home() {
       </Head>
 
       <Navbar />
+      <div className="mt-16 max-w-[1240px] m-auto flex flex-col items-center">
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
     </div>
   );
 }
