@@ -50,7 +50,3 @@ h2 {
 li {
   @apply cursor-pointer;
 }
-
-button {
-  @apply w-40 rounded-md font-medium text-lg text-white hover:text-slate-900 cursor-pointer p-2 bg-principal bg-opacity-10 hover:bg-opacity-100;
-}
