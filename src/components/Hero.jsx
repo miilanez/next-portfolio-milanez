@@ -1,13 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Typewriter from "typewriter-effect";
 import {
   IoLogoLinkedin,
   IoLogoGithub,
   IoLogoTwitter,
   IoLogoFacebook,
 } from "react-icons/io";
+import { CgFileDocument } from "react-icons/cg";
 import heroImage from "../../public/assets/images/main/hero_img.gif";
+import Button from "./Button";
 
 const Hero = () => {
   return (
@@ -42,15 +45,24 @@ const Hero = () => {
             <div className="p-2">
               <h2 className="text-4xl">Olá! aqui é o</h2>
               <h1 className="text-8xl text-secondary">Gabriel Milanez</h1>
-              <h2 className="text-4xl">
-                e sou{" "}
-                <span className="text-principal">Desenvolvedor Front-End</span>
+              <h2 className="text-4xl flex flex-row">
+                e sou
+                <span className="text-principal ml-2">
+                  <Typewriter
+                    options={{
+                      strings: ["Desenvolvedor Front-End"],
+                      autoStart: true,
+                      loop: true,
+                      cursor: "_",
+                      pauseFor: 60000,
+                    }}
+                  />
+                </span>
               </h2>
 
-              
-
-              <div className="mt-5">
-                <p className="">Jaboatão dos Guararapes - PE</p>
+              <div className=" w-full flex flex-row justify-evenly mt-10">
+                <Button icon={<CgFileDocument />} title="Currículo" link="#" />
+                <Button icon={<IoLogoLinkedin />} title="LinkedIn" link="#" />
               </div>
             </div>
             <div></div>
