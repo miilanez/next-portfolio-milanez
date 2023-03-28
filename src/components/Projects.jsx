@@ -2,30 +2,17 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <div id="projetos">
-      <h1 className="text-white">PROJECTS</h1>
-      <div className="text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, repellat
-        quis. Eos voluptatem corporis, praesentium maxime unde laboriosam minima
-        ipsam? Explicabo nam nisi reprehenderit temporibus sequi laudantium
-        possimus ex magni. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Error, repellat quis. Eos voluptatem corporis, praesentium maxime
-        unde laboriosam minima ipsam? Explicabo nam nisi reprehenderit
-        temporibus sequi laudantium possimus ex magni. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Error, repellat quis. Eos voluptatem
-        corporis, praesentium maxime unde laboriosam minima ipsam? Explicabo nam
-        nisi reprehenderit temporibus sequi laudantium possimus ex magni. Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Error, repellat quis.
-        Eos voluptatem corporis, praesentium maxime unde laboriosam minima
-        ipsam? Explicabo nam nisi reprehenderit temporibus sequi laudantium
-        possimus ex magni. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Error, repellat quis. Eos voluptatem corporis, praesentium maxime
-        unde laboriosam minima ipsam? Explicabo nam nisi reprehenderit
-        temporibus sequi laudantium possimus ex magni. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Error, repellat quis. Eos voluptatem
-        corporis, praesentium maxime unde laboriosam minima ipsam? Explicabo nam
-        nisi reprehenderit temporibus sequi laudantium possimus ex magni. Lorem
-      </div>
+    <div
+      id="projetos"
+      className="w-full p-5 my-5 md:mb-10 flex flex-col justify-evenly items-center text-white"
+    >
+      <h1 className="my-10">PROJETOS</h1>
+
+      <h2 className="text-center">
+        <span className="text-principal text-xl md:text-4xl">
+          Confira alguns dos meus trabalhos mais recentes
+        </span>
+      </h2>
     </div>
   );
 };

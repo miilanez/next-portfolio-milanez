@@ -35,7 +35,7 @@ const Services = () => {
               <h2 class="md:mt-2 text-secondary text-xl font-bold">Websites</h2>
             </div>
 
-            <p class=" mt-1 sm:block sm:text-sm text-white">
+            <p class="mt-1 sm:block sm:text-sm text-white">
               Produção de websites responsivos e dinâmicos em Nextjs ou
               Wordpress
             </p>
@@ -46,7 +46,7 @@ const Services = () => {
             href="/accountant"
           >
             <div className="flex flex-row md:flex-col justify-start items-center md:items-start">
-              <span class="inline-block rounded-lg bg-white p-3">
+              <span class="inline-block rounded-lg bg-white p-3 mr-3">
                 <MdDevices size={25} />
               </span>
 
@@ -54,7 +54,7 @@ const Services = () => {
                 Landing Pages
               </h2>
             </div>
-            <p class="hidden sm:mt-1 sm:block sm:text-sm text-white">
+            <p class="mt-1 sm:block sm:text-sm text-white">
               Hotsites customizadas para converter visitantes em Leads e em
               Clientes
             </p>
@@ -65,7 +65,7 @@ const Services = () => {
             href="/accountant"
           >
             <div className="flex flex-row md:flex-col justify-start items-center md:items-start">
-              <span class="inline-block rounded-lg bg-white p-3">
+              <span class="inline-block rounded-lg bg-white p-3 mr-3">
                 <TbLayoutDashboard size={25} />
               </span>
 
@@ -73,7 +73,7 @@ const Services = () => {
                 Aplicações Web
               </h2>
             </div>
-            <p class="hidden sm:mt-1 sm:block sm:text-sm text-white">
+            <p class="mt-1 sm:block sm:text-sm text-white">
               Desenvolvimento de Dashboards e outras aplicações
             </p>
           </Link>
