@@ -40,56 +40,70 @@ const About = () => {
   return (
     <div id="sobre" className="p-5 flex flex-col justify-evenly items-center">
       <h1 className="text-white my-12">SOBRE</h1>
-      <div
-        id="about-content"
-        className="flex flex-col md:flex-row md:justify-evenly"
-      >
-        <div className="lg:w-[30%] flex justify-center items-center">
-          <Image
-            src={aboutImage}
-            alt="Imagem de Gabriel Milanez"
-            className="rounded-full mb-5"
-          />
-        </div>
-        <div className="text-white flex flex-col justify-center items-center my-5 text-center md:w-[59%]">
-          <h2 className="mb-2">Eu sou Gabriel Milanez</h2>
-          <h2 className="mb-5 text-sm flex flex-row justify-center items-center text-principal">
-            <span className="mr-2 text-base">
-              <MdLocationOn />
-            </span>
-            Jaboatão dos Guararapes - PE - Brasil
-          </h2>
-          <p className="mb-5">
-            Olá, seja bem-vindo(a) ao meu portfólio! Eu começei a estudar
-            tecnologia e estou no mercado há quase 10 anos. Desde então, fui
-            conheçendo e me aprimorando nos recursos tecnológicos. Quando vi o
-            potencial da programação em resolver problemas reais e ajudar as
-            pessoas, vi que não tinha como seguir por outro caminho. Hoje, sou
-            um Desenvolvedor especialista em Front-End Jr, buscando melhorias e
-            desenvolvendo aprendizado sempre que é possivel.
-          </p>
-
-          <h4>Atualmente eu estudo e trabalho com as seguintes tecnologias:</h4>
-
-          <div id="tecnology-box" className="w-full my-8 flex justify-center items-center">
-            {/* <ul className="grid lg:flex grid-cols-4 lg:flex-row lg:justify-center lg:items-center"> */}
-            <ul className="w-full flex flex-wrap lg:flex-nowrap justify-center">
-              {tecnologias.map((item) => (
-                <li className="p-3 w-1/3 lg:w-auto md:w-1/6 flex justify-center items-center">
-                  <Link
-                    href={item.href}
-                    key={item.name}
-                    alt={item.name}
-                    className="text-secondary"
-                  >
-                    <span className="text-4xl">{item.icon}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <div className="flex flex-col justify-center items-center">
+        <div
+          id="about-content"
+          className="flex flex-col md:flex-row md:justify-evenly"
+        >
+          <div className="lg:w-[30%] flex justify-center items-center">
+            <Image
+              src={aboutImage}
+              alt="Imagem de Gabriel Milanez"
+              className="rounded-full mb-5"
+            />
           </div>
+          <div className="text-white flex flex-col justify-center items-center my-5 text-center md:w-[59%]">
+            <h2 className="mb-2">Eu sou Gabriel Milanez</h2>
+            <h2 className="mb-5 text-sm flex flex-row justify-center items-center text-principal">
+              <span className="mr-2 text-base">
+                <MdLocationOn />
+              </span>
+              Jaboatão dos Guararapes - PE - Brasil
+            </h2>
+            <p className="mb-1">
+              Olá, seja bem-vindo(a) ao meu portfólio! Eu estou no mercado há
+              quase 10 anos. Desde então, fui conheçendo e me aprimorando nos
+              recursos tecnológicos. Começei a carreira como Técnico em T.I.,
+              mas quando vi o potencial da programação em resolver problemas
+              reais e ajudar as pessoas, decidi que era isso que eu queria
+              fazer. Hoje, sou um Desenvolvedor especialista em Front-End Jr,
+              buscando oferecer aos clientes as melhores soluções para o seu
+              negócio.
+            </p>
+            <p className="mb-5">
+              Também gosto de compartilhar conteúdo relacionado ao que aprendi
+              ao longo dos anos em Desenvolvimento Web para que possa ajudar
+              outras pessoas da Comunidade Dev. Sinta-se à vontade para se
+              conectar ou me seguir no meu Linkedin , onde posto conteúdo útil
+              relacionado ao desenvolvimento e programação da Web Estou aberto a
+              oportunidades de trabalho onde possa contribuir, aprender e
+              crescer. Se você tiver uma boa oportunidade que corresponda às
+              minhas habilidades e experiência, não hesite em entrar em contato
+              comigo.
+            </p>
+            <Button icon={<CgFileDocument />} title="Currículo" link="#" />
+          </div>
+        </div>
 
-          <Button icon={<CgFileDocument />} title="Currículo" link="#" />
+        <div
+          id="tecnology-box"
+          className="w-full mt-8 flex flex-col justify-center items-center"
+        >
+          <h4 className="text-white text-lg">Atualmente eu estudo e trabalho com as seguintes tecnologias:</h4>
+          <ul className="w-full mt-6 flex flex-wrap lg:flex-nowrap justify-center">
+            {tecnologias.map((item) => (
+              <li className="p-3 w-1/3 lg:w-auto md:w-1/6 flex justify-center items-center">
+                <Link
+                  href={item.href}
+                  key={item.name}
+                  alt={item.name}
+                  className="text-secondary"
+                >
+                  <span className="text-4xl">{item.icon}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

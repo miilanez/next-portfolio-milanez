@@ -1,9 +1,14 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import About from "@/components/About";
+import CallToAction from "@/components/CallToAction";
+import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
+import ContactWithForm from "@/components/ContactWithForm";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
+import Services from "@/components/Services";
 import Head from "next/head";
 
 export default function Home() {
@@ -26,9 +31,14 @@ export default function Home() {
       <div className="mt-16 max-w-[1240px] m-auto flex flex-col items-center">
         <Hero />
         <About />
+        <Services />
         <Projects />
+        <Clients />
+        <CallToAction />
         <Contact />
+        {/* <ContactWithForm /> */}
       </div>
+      <Footer />
     </div>
   );
 }
