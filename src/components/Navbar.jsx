@@ -1,13 +1,9 @@
 /* eslint-disable react/jsx-key */
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import {
-  IoLogoLinkedin,
-  IoLogoGithub,
-  IoLogoTwitter,
-  IoLogoFacebook,
-} from "react-icons/io";
+import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from "react-icons/io";
 
 const Navbar = () => {
   //gerenciamento de estados
@@ -21,11 +17,11 @@ const Navbar = () => {
 
   //itens de navegação
   const navigation = [
-    { name: "Principal", href: "/" },
-    { name: "Sobre", href: "#sobre" },
-    { name: "Projetos", href: "#projetos" },
+    { name: "Principal", href: "principal" },
+    { name: "Sobre", href: "sobre" },
+    { name: "Projetos", href: "projetos" },
     // { name: "Blog", href: "blogs" },
-    { name: "Contato", href: "#contato" },
+    { name: "Contato", href: "contato" },
   ];
 
   //efeito na navbar ao scrollar a página
@@ -54,16 +50,54 @@ const Navbar = () => {
           </h1>
         </Link>
         <ul className="hidden sm:flex">
-          {navigation.map((item) => (
-            <li key={item.name} className="p-4">
-              <Link
-                href={item.href}
-                className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
+          <li className="p-4">
+            <Link
+              activeClass="active"
+              to="principal"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
+            >
+              Principal
+            </Link>
+          </li>
+          <li className="p-4">
+            <Link
+              activeClass="active"
+              to="sobre"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
+            >
+              Sobre
+            </Link>
+          </li>
+          <li className="p-4">
+            <Link
+              activeClass="active"
+              to="projetos"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
+            >
+              Projetos
+            </Link>
+          </li>
+          <li className="p-4">
+            <Link
+              activeClass="active"
+              to="contato"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
+            >
+              Contato
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Button */}

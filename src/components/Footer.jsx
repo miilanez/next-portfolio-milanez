@@ -1,15 +1,20 @@
 import Link from "next/link";
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
+  function scrollToTop() {
+    scroll.scrollToTop();
+  }
+
   return (
     <div className="w-full">
       <footer aria-label="Site Footer" className="bg-darkess">
         <div className="relative px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8">
-            <Link
-              className="inline-block rounded-full bg-principal p-2 text-black shadow transition hover:bg-secondary sm:p-3 lg:p-4"
-              href="/"
+            <a
+              className="inline-block rounded-full bg-principal p-2 text-black shadow transition hover:bg-secondary sm:p-3 lg:p-4 cursor-pointer"
+              onClick={scrollToTop}
             >
               <span className="sr-only">Voltar para o Topo</span>
 
@@ -25,7 +30,7 @@ const Footer = () => {
                   clip-rule="evenodd"
                 />
               </svg>
-            </Link>
+            </a>
           </div>
 
           <div className="lg:flex lg:items-end lg:justify-between">
