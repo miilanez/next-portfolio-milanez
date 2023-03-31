@@ -68,12 +68,12 @@ export default Projects;
 
 function ProjectCard({ type, title, technologys, image, description, linkDemo, linkGitHub }) {
   return (
-    <div className="w-full h-40 md:h-96 md:min-w-[31%] bg-darkess border border-principal rounded-lg">
+    <div className="w-full h-64 md:h-96 md:min-w-[31%] bg-darkess border border-principal rounded-lg">
       <div className="group relative block">
         <Image
           alt="Developer"
           src={image}
-          className="absolute inset-0 object-cover rounded-lg h-40 md:h-96 w-full opacity-25 transition-opacity group-hover:opacity-50"
+          className="absolute inset-0 object-cover rounded-lg h-64 md:h-96 w-full opacity-25 transition-opacity group-hover:opacity-50"
         />
 
         <div className="relative p-4 sm:p-6 lg:p-8">
@@ -83,8 +83,7 @@ function ProjectCard({ type, title, technologys, image, description, linkDemo, l
 
           <p className="text-xl font-bold text-white sm:text-2xl">{title}</p>
 
-          {/* <div className="hidden md:block mt-32 sm:mt-48 lg:mt-64"> */}
-          <div className="hidden xl:block md:mt-40">
+          <div className="mt-12 xl:block md:mt-40">
             <div className="flex flex-col justify-center items-center translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
               <div className="flex flex-row justify-evenly items-center gap-2">
                 <MiniButton title="Demo" icon={<FiAirplay />} link={linkDemo} />
