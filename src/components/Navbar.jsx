@@ -14,16 +14,7 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setNavbar(!navbar);
   };
-
-  //itens de navegação
-  const navigation = [
-    { name: "Principal", href: "principal" },
-    { name: "Sobre", href: "sobre" },
-    { name: "Projetos", href: "projetos" },
-    // { name: "Blog", href: "blogs" },
-    { name: "Contato", href: "contato" },
-  ];
-
+  
   //efeito na navbar ao scrollar a página
   useEffect(() => {
     const changeColor = () => {
