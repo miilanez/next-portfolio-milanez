@@ -1,10 +1,8 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Button from "./Button";
 import aboutImage from "../../public/assets/images/main/foto_gabriel.png";
-
 import { MdLocationOn } from "react-icons/md";
 import {
   SiCss3,
@@ -20,6 +18,7 @@ import {
   SiVite,
 } from "react-icons/si";
 import { CgFileDocument } from "react-icons/cg";
+import { Tooltip } from "@mui/material";
 
 const About = () => {
   //tecnologias
@@ -52,8 +51,8 @@ const About = () => {
               className="rounded-full mb-5"
             />
           </div>
-          <div className="text-white flex flex-col justify-center items-center my-5 text-center md:w-[59%]">
-            <h2 className="mb-2">Eu sou Gabriel Milanez</h2>
+          <div className="text-white flex flex-col justify-center items-center text-center my-5 md:w-[59%]">
+            <h2 className="mb-2">Sou Gabriel Milanez</h2>
             <h2 className="mb-5 text-sm flex flex-row justify-center items-center text-principal">
               <span className="mr-2 text-base">
                 <MdLocationOn />
@@ -61,12 +60,12 @@ const About = () => {
               Jaboatão dos Guararapes - PE - Brasil
             </h2>
             <p className="mb-1">
-              Olá, seja bem-vindo(a) ao meu portfólio! Eu estou no mercado há
-              quase 10 anos. Desde então, fui conheçendo e me aprimorando nos
-              recursos tecnológicos. Começei a carreira como Técnico em T.I.,
+              Olá, seja bem-vindo(a) ao meu portfólio! Estou no mercado há
+              10 anos. Desde então, fui conheçendo e me aprimorando nos
+              recursos tecnológicos. Começei a carreira como Técnico em TI,
               mas quando vi o potencial da programação em resolver problemas
               reais e ajudar as pessoas, decidi que era isso que eu queria
-              fazer. Hoje, sou um Desenvolvedor especialista em Front-End Jr,
+              fazer. Hoje, sou um Desenvolvedor em Front-End Jr,
               buscando oferecer aos clientes as melhores soluções para o seu
               negócio.
             </p>
@@ -81,7 +80,11 @@ const About = () => {
               minhas habilidades e experiência, não hesite em entrar em contato
               comigo.
             </p>
-            <Button icon={<CgFileDocument />} title="Currículo" link="#" />
+            <Button
+              icon={<CgFileDocument />}
+              title="Currículo"
+              link="https://documentcloud.wondershare.com/share/review/zwp63GvBBikzABv2bG5wNiwbXi2znLlIzSdtWrq1D4pf-ug3irinwmNVafFP65-_sZ9eLtNvsEUZ2xANwPOngw"
+            />
           </div>
         </div>
 
@@ -89,18 +92,21 @@ const About = () => {
           id="tecnology-box"
           className="w-full mt-8 flex flex-col justify-center items-center"
         >
-          <h4 className="text-white text-lg">Atualmente eu estudo e trabalho com as seguintes tecnologias:</h4>
+          <h4 className="text-white text-lg">
+            Atualmente eu estudo e trabalho com as seguintes tecnologias:
+          </h4>
           <ul className="w-full mt-6 flex flex-wrap lg:flex-nowrap justify-center">
             {tecnologias.map((item) => (
-              <li className="p-3 w-1/3 lg:w-auto md:w-1/6 flex justify-center items-center">
-                <Link
+              <li key={item.name} className="p-3 w-1/3 lg:w-auto md:w-1/6 flex justify-center items-center">
+                <a
                   href={item.href}
-                  key={item.name}
                   alt={item.name}
                   className="text-secondary"
                 >
-                  <span className="text-4xl">{item.icon}</span>
-                </Link>
+                  <Tooltip title={item.name} arrow>
+                    <span className="text-4xl md:text-5xl">{item.icon}</span>
+                  </Tooltip>
+                </a>
               </li>
             ))}
           </ul>

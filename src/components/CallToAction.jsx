@@ -14,9 +14,9 @@ const CallToAction = () => {
           <Button
             icon={<IoIosRocket />}
             title="Iniciar Projeto"
-            link="#contato"
+            link="https://api.whatsapp.com/send?phone=5581982301817&text=Fala%20Gabriel%2C%20Bom%20dia!"
           />
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

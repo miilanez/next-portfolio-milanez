@@ -32,7 +32,12 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex p-3 space-x-4 rounded-lg md:space-x-6 bg-darkess bg-opacity-10 text-gray-100">
+        <a
+          href="mailto:gabrielmilanez99@hotmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex p-3 space-x-4 rounded-lg md:space-x-6 bg-darkess bg-opacity-10 text-gray-100"
+        >
           <div className="flex justify-center items-center p-2 align-middle rounded-lg sm:p-4 bg-principal">
             <IoIosMail size={35} />
           </div>
@@ -42,16 +47,14 @@ const Contact = () => {
             </p>
             <p className="">Hotmail e Gmail</p>
           </div>
-        </div>
+        </a>
 
         <div className="flex p-3 space-x-4 rounded-lg md:space-x-6 bg-darkess bg-opacity-10 text-gray-100">
           <div className="flex justify-center items-center p-2 align-middle rounded-lg sm:p-4 bg-principal">
             <DiGhostSmall size={35} />
           </div>
           <div className="flex flex-col justify-center align-middle">
-            <p className="text-2xl font-semibold leading-none">
-              Formulário
-            </p>
+            <p className="text-2xl font-semibold leading-none">Formulário</p>
           </div>
         </div>
 
@@ -61,9 +64,9 @@ const Contact = () => {
           </div>
           <div className="flex flex-col justify-center align-middle">
             <p className="text-lg font-semibold leading-none">
-              Av Ulysses Montarroyos, 2418
+              Candeias, Jaboatão dos Guararapes
             </p>
-            <p className="">Candeias, Jaboatão-PE</p>
+            <p className="">Pernambuco - Brasil</p>
           </div>
         </div>
       </div>

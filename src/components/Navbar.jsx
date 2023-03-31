@@ -55,9 +55,8 @@ const Navbar = () => {
         </Link>
         <ul className="hidden sm:flex">
           {navigation.map((item) => (
-            <li className="p-4">
+            <li key={item.name} className="p-4">
               <Link
-                key={item.name}
                 href={item.href}
                 className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
               >
@@ -88,9 +87,8 @@ const Navbar = () => {
           </div>
           <ul className="my-24 ">
             {navigation.map((item) => (
-              <li className="p-4">
+              <li key={item.name} className="p-4">
                 <Link
-                  key={item.name}
                   href={item.href}
                   onClick={handleShowNavbar}
                   className="p-4 text-principal text-2xl hover:text-gray-500"
@@ -104,24 +102,19 @@ const Navbar = () => {
             <p className="tracking-widest text-white">Vamos nos conectar!</p>
             <div className="mt-2">
               <ul className="flex flex-row justify-around text-principal">
-                <Link href="/">
+                <Link href="https://github.com/miilanez">
                   <li>
                     <IoLogoGithub size={30} />
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="https://www.linkedin.com/in/gabriel-milanez/">
                   <li>
                     <IoLogoLinkedin size={30} />
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="https://twitter.com/mr_milanez">
                   <li>
                     <IoLogoTwitter size={30} />
-                  </li>
-                </Link>
-                <Link href="/">
-                  <li>
-                    <IoLogoFacebook size={30} />
                   </li>
                 </Link>
               </ul>
