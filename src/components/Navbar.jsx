@@ -120,17 +120,58 @@ const Navbar = () => {
             </Link>
           </div>
           <ul className="my-24 ">
-            {navigation.map((item) => (
-              <li key={item.name} className="p-4">
-                <Link
-                  href={item.href}
-                  onClick={handleShowNavbar}
-                  className="p-4 text-principal text-2xl hover:text-gray-500"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+            <li className="p-4">
+              <Link
+                activeClass="active"
+                to="principal"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handleShowNavbar}
+                className="p-4 text-principal text-2xl hover:text-gray-500"
+              >
+                Principal
+              </Link>
+            </li>
+            <li className="p-4">
+              <Link
+                activeClass="active"
+                to="sobre"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handleShowNavbar}
+                className="p-4 text-principal text-2xl hover:text-gray-500"
+              >
+                Sobre
+              </Link>
+            </li>
+            <li className="p-4">
+              <Link
+                activeClass="active"
+                to="projetos"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handleShowNavbar}
+                className="p-4 text-principal text-2xl hover:text-gray-500"
+              >
+                Projetos
+              </Link>
+            </li>
+            <li className="p-4">
+              <Link
+                activeClass="active"
+                to="contato"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handleShowNavbar}
+                className="p-4 text-principal text-2xl hover:text-gray-500"
+              >
+                Contato
+              </Link>
+            </li>
           </ul>
           <div id="social medias" className="">
             <p className="tracking-widest text-white">Vamos nos conectar!</p>
