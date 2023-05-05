@@ -83,7 +83,7 @@ const About = () => {
             <Button
               icon={<CgFileDocument />}
               title="Currículo"
-              link="https://documentcloud.wondershare.com/share/review/zwp63GvBBikzABv2bG5wNiwbXi2znLlIzSdtWrq1D4pf-ug3irinwmNVafFP65-_sZ9eLtNvsEUZ2xANwPOngw"
+              link="https://1drv.ms/b/s!AnV10JJ1-_YAivAzOivOqBl3wKb7RQ?e=rwVwxc"
             />
           </div>
         </div>
