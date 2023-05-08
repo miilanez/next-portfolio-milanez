@@ -7,6 +7,7 @@ import DefaultImage from "../../public/assets/images/projects/default.png";
 import Echo from "../../public/assets/images/projects/echo.png";
 import VeraCruz from "../../public/assets/images/projects/site-vera-cruz.png";
 import Researcher from "../../public/assets/images/projects/researcher.png";
+import DevBlog from "../../public/assets/images/projects/devblog.png"
 
 const Projects = () => {
   return (
@@ -34,12 +35,30 @@ const Projects = () => {
         />
         <ProjectCard
           type="Website"
+          title="Blog Dev Milanez"
+          linkDemo="https://blogdevmilanez.vercel.app"
+          linkGitHub="https://github.com/miilanez/blog-dev-milanez"
+          technologys="NextJs, Tailwind, GraphQl"
+          image={DevBlog}
+          description="Blog profissional criado para trazer atualizações sobre tecnologia"
+        />
+        {/* <ProjectCard
+          type="Website"
           title="Site Vera Cruz FC"
           linkDemo="https://veracruzfutebolclube.vercel.app/"
           linkGitHub="https://github.com/miilanez/site-vera-cruz"
           technologys="HTML5, CSS3, JavaScript, Bootstrap"
           image={VeraCruz}
           description="Website de estudos modelo para clubes de futebol"
+        /> */}
+        <ProjectCard
+          type="Website"
+          title="Portfólio Pessoal"
+          linkDemo="#"
+          linkGitHub="https://github.com/miilanez/next-portfolio-milanez"
+          technologys="NextJS, Tailwind, Sass, MaterialUI"
+          image={DefaultImage}
+          description="Website tipo Portfólio criado para uso pessoal"
         />
         <ProjectCard
           type="Aplicação"
@@ -49,15 +68,6 @@ const Projects = () => {
           technologys="ReactJS, CSS3, Axios"
           image={Researcher}
           description="Aplicação Web criada para achar e contabilizar perfis de usuários do Github"
-        />
-        <ProjectCard
-          type="Website"
-          title="Portfólio Pessoal"
-          linkDemo="#"
-          linkGitHub="https://github.com/miilanez/next-portfolio-milanez"
-          technologys="NextJS, Tailwind, Sass, MaterialUI"
-          image={DefaultImage}
-          description="Website tipo Portfólio criado para uso pessoal"
         />
       </div>
     </div>
