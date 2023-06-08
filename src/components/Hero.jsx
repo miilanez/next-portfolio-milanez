@@ -41,7 +41,7 @@ const Hero = () => {
           >
             <div className="p-2">
               <h2 className="text-xl md:text-4xl">Olá! aqui é o</h2>
-              <h1 className="text-3xl md:text-8xl text-secondary">
+              <h1 className="text-3xl md:text-8xl md:my-2 text-secondary">
                 Gabriel Milanez
               </h1>
               <h2 className="text-xl text-principal ml-2 md:text-3xl xl:text-4xl">
@@ -56,11 +56,11 @@ const Hero = () => {
                 />
               </h2>
 
-              <div className=" w-full flex flex-col md:flex-row items-center justify-evenly my-6 ">
+              <div className=" w-full flex flex-col md:flex-row items-center justify-evenly mt-16 mb-6 ">
                 <Button
                   icon={<CgFileDocument />}
                   title="Currículo"
-                  link="https://1drv.ms/b/s!AnV10JJ1-_YAivAzOivOqBl3wKb7RQ?e=rwVwxc"
+                  link="https://1drv.ms/b/s!AnV10JJ1-_YAivEdlTQQw_lPrLvsJQ?e=HgRRDD"
                 />
 
                 <Button

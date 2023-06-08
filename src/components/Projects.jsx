@@ -15,7 +15,7 @@ const Projects = () => {
       id="projetos"
       className="w-full p-5 my-5 md:mb-10 flex flex-col justify-evenly items-center text-white"
     >
-      <h1 className="my-10">PROJETOS</h1>
+      <h1 className="my-10 mt-20">PROJETOS</h1>
 
       <h2 className="text-center">
         <span className="text-principal text-xl md:text-4xl">

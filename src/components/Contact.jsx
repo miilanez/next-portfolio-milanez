@@ -11,7 +11,7 @@ const Contact = () => {
       id="contato"
       className="w-full p-5 my-5 md:mb-10 flex flex-col justify-evenly items-center text-white"
     >
-      <h1 className="my-10">CONTATO</h1>
+      <h1 className="my-10 mt-20">CONTATO</h1>
 
       <h2 className="text-center">
         <span className="text-principal">

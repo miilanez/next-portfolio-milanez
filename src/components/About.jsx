@@ -38,7 +38,7 @@ const About = () => {
 
   return (
     <div id="sobre" className="p-5 flex flex-col justify-evenly items-center">
-      <h1 className="text-white my-12">SOBRE</h1>
+      <h1 className="text-white my-12 mt-20">SOBRE</h1>
       <div className="flex flex-col justify-center items-center">
         <div
           id="about-content"
@@ -83,7 +83,7 @@ const About = () => {
             <Button
               icon={<CgFileDocument />}
               title="Currículo"
-              link="https://1drv.ms/b/s!AnV10JJ1-_YAivAzOivOqBl3wKb7RQ?e=rwVwxc"
+              link="https://1drv.ms/b/s!AnV10JJ1-_YAivEdlTQQw_lPrLvsJQ?e=HgRRDD"
             />
           </div>
         </div>

@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className="fixed right-0 top-0 w-full h-16 z-10 ease-in duration-300"
+      className="fixed right-0 top-0 w-full  z-10 ease-in duration-300"
     >
       <div className="max-w-[1240px] m-auto flex justify-between items-center text-white p-3 md:p-0 md:px-2 xl:px-1">
         <Link href="/">
