@@ -83,7 +83,7 @@ const About = () => {
             <Button
               icon={<CgFileDocument />}
               title="Currículo"
-              link="https://1drv.ms/b/s!AnV10JJ1-_YAivEdlTQQw_lPrLvsJQ?e=HgRRDD"
+              link="https://1drv.ms/f/s!AnV10JJ1-_YAivZjNM0I6Csld6U51A?e=PWJAqH"
             />
           </div>
         </div>
