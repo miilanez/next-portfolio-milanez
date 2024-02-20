@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setNavbar(!navbar);
   };
-  
+
   //efeito na navbar ao scrollar a página
   useEffect(() => {
     const changeColor = () => {
@@ -88,6 +88,20 @@ const Navbar = () => {
             >
               Contato
             </Link>
+          </li>
+          <li className="p-4">
+            <a
+              activeClass="active"
+              href="https://blogdevmilanez.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="relative font-medium hover:text-principal before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-secondary before:transition hover:before:scale-x-100"
+            >
+              Blog
+            </a>
           </li>
         </ul>
 
